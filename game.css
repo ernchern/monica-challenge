@@ -1,3 +1,22 @@
 body {
-    background: url("https://cdn.pixabay.com/photo/2018/08/11/21/06/seoul-3599499_1280.jpg") #eee;
+    background-image: url("img/bg.jpg");
+	background-repeat: repeat;
+}
+
+h2 {
+	font-family: 'Baloo Bhaina 2', cursive;
+}
+
+p {
+	font-family: 'Gochi Hand', cursive;
+}
+
+.white-bg {
+	/*margin: 0 auto;*/
+	position: absolute;
+	left: 25%;
+    top: 25%;
+	padding: 20px;
+	width: fit-content;
+	background-color: rgba(255, 255, 255, 0.9);
 }
