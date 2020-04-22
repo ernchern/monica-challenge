@@ -12,11 +12,21 @@ p {
 }
 
 .white-bg {
-	/*margin: 0 auto;*/
+	width: 600px;
+	height: 250px;
+	
 	position: absolute;
-	left: 25%;
-    top: 25%;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+	
 	padding: 20px;
-	width: fit-content;
+	/*
+	margin: 0 auto;
+	padding: 20px;
+	width: fit-content;*/
 	background-color: rgba(255, 255, 255, 0.9);
 }
