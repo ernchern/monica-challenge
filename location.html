@@ -9,25 +9,24 @@
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@800&family=Gochi+Hand&display=swap" rel="stylesheet">
 	<link href="./game.css" rel="stylesheet" />
   </head>
-  <body>
+  <body onload="ablefinish()">
 	<body>
-    <div class="white-bg" align="center">
+    <div class="white-bg" align="center" id="location">
 		<p class="baloo">
 		Your friends are in the following cities. <br>
 		Go to each city to complete the challenge from Mr. Onion to save your friends.<br>
 		</p>
 		<div class="row">
 			<div class="column">
-				<button class="citybutton" id="daejeon" onclick="checkcity(this.id)"><span>Daejeon</span></button>
-				<button class="citybutton" id="penang" onclick="checkcity(this.id)"><span>Penang</span></button>
+				<button class="citybutton" id="daejeon" onclick="checkcity(daejeon)"><span>Daejeon</span></button>
+				<button class="citybutton" id="penang" onclick="checkcity(penang)"><span>Penang</span></button>
 			</div>
 			<div class="column">
-				<button class="citybutton" id="bandung" onclick="checkcity(this.id)"><span>Bandung</span></button>
-				<button class="citybutton" id="kl" onclick="checkcity(this.id)"><span>KL</span></button>
+				<button class="citybutton" id="bandung" onclick="checkcity(bandung)"><span>Bandung</span></button>
+				<button class="citybutton" id="kl" onclick="checkcity(kl)"><span>KL</span></button>
 			</div>
 		</div>
-		<br><br>
-		<button class="mainbutton" onClick="restart()"><span>Restart everything</span></button>
+		<br>
 	</div>
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>

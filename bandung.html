@@ -11,9 +11,21 @@
   </head>
   <body>
 	<body>
-    <div class="white-bg" align="center">
-		<h2 class="baloo">This is Bandung Page</h2>
-		<button class="mainbutton" onclick="complete('bandung')">Click this to complete the challenge</button>
+    <div class="white-bg" align="center" id="question">
+		<h2 class="baloo">Welcome to Bandung!<br>And this is Gibberish challenge!</h2>
+		<div class="row">
+			<div class="column">
+				<img src="img/onion.png" width="200" height="180">
+				<!-- <button class="mainbutton" onclick="complete('bandung')">Click this to complete the challenge</button> -->
+			</div>
+			<div class="column">
+				<p class="message" align="left">HAHAHA, you won't pass this challenge!
+				<br>Vaccine is belong to me!
+				<br>I will make you cry... like an onion HAHAHA (cold joke)
+				</p>
+				<button class="quesbutton" onclick="loadques(bandung,0)">Challenge accepted!</button>
+			</div>
+		</div>
 	</div>
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
