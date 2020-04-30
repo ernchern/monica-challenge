@@ -86,5 +86,7 @@ function checkanswer(answer,city,seq) {
 	if (check.split(' ').join('').toLowerCase() == answer.split(' ').join('').toLowerCase()) {
 		sessionStorage.setItem(city[seq]["city"],seq+1);
 		loadques(city,seq+1);
+	} else {
+		alert("wrong!");
 	}
 }
