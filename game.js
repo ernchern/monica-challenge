@@ -1,29 +1,6 @@
 $( document ).ready(
 );
 
-var daejeon=[];
-
-var bandung=[
-{
-	"city": "bandung",
-	"author": "Alvin",
-	"question": "Cue cheese angry erm",
-	"answer": "Cookies and cream",
-	"hint": "It's a type of flavour!"
-},
-{
-	"city": "bandung",
-	"author": "Alvin",
-	"question": "Eye ammo knicker",
-	"answer": "I am Monica",
-	"hint": "Who are you?"
-}
-];
-
-var penang=[];
-
-var kl=[];
-
 
 function main() {
 	sessionStorage.clear();
@@ -68,11 +45,10 @@ function loadques(city,seq) {
 	if (seq >= city.length) {
 		$( "#question" ).append('<div class="row"><div class="column"><img src="img/onion.png" width="200" height="180"></div><div class="column"><p class="message" align="left">What?! You completed it?!<br>Don\'t get relaxed!<br>I will be back.. HAHAHA</p></div></div><br><br><button class="mainbutton" onClick="complete()"><span>Go back to map</span></button>');
 	} else {
-		$( "#question" ).append('<p class="ques">Question '+(seq+1).toString()+': '+city[seq]["question"]+'</p><p class="gochi">Your Answer:</p>');
-		console.log(sessionStorage.getItem(city[seq]["city"]));
+		$( "#question" ).append('<p class="ques">Question '+(seq+1).toString()+': '+city[seq]["question"]+'</p><p class="gochi">a question by ~'+city[seq]["author"]+' ~</p><br><p class="gochi">Your Answer:</p>');
 		if ((seq+1)>sessionStorage.getItem(city[seq]["city"])) {
 			var check =city[seq]["answer"];
-			$( "#question" ).append('<input type="text"  id="submit" class="answer"><br><br><button class="submitbutton" onclick="checkanswer(\''+check+'\','+city[seq]["city"]+','+seq+')">Submit</button>');
+			$( "#question" ).append('<input type="text"  id="submit" class="answer"><br><br><button class="submitbutton" onclick="checkanswer(\''+check+'\','+city[seq]["city"]+','+seq+')">Submit</button><p class="gochi" id="hint"></p>');
 		} else {
 			$( "#question" ).append('<p class="gochi">'+city[seq]["answer"]+'</p>');
 			console.log("hi");
@@ -81,12 +57,21 @@ function loadques(city,seq) {
 	}
 }
 
+var count = 0;
+
 function checkanswer(answer,city,seq) {
 	var check = document.getElementById("submit").value;
 	if (check.split(' ').join('').toLowerCase() == answer.split(' ').join('').toLowerCase()) {
 		sessionStorage.setItem(city[seq]["city"],seq+1);
+		count=0;
+		alert("Congratulations, You are correct!");
 		loadques(city,seq+1);
 	} else {
-		alert("wrong!");
+		count++;
+		alert("Oh no... You are wrong! Try again...");
+		if (count >= 2) {
+			$( "#hint" ).empty();
+			$( "#hint" ).append('Hint: '+city[seq]["hint"]);
+		}
 	}
 }
