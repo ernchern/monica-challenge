@@ -40,6 +40,10 @@ function ablefinish() {
 	}
 }
 
+function finish() {
+	window.location.href = 'final.html';
+}
+
 function loadques(city,seq) {
 	$( "#question" ).empty();
 	if (seq >= city.length) {
