@@ -33,6 +33,43 @@ var bandung=[
 }
 ];
 
-var penang=[];
+var penang=[
+{
+	"city": "penang",
+	"author": "your roommate :)",
+	"question": "For Initial Eyes",
+	"answer": "Finish your rice",
+	"hint": "Mum says can't waste food!"
+},
+{
+	"city": "penang",
+	"author": "en zhen",
+	"question": "mee juice worm itchy",
+	"answer": "miss you so much",
+	"hint": "보고싶다"
+},
+{
+	"city": "penang",
+	"author": "crazy me",
+	"question": "current lamp 아",
+	"answer": "korean drama",
+	"hint": "something addicted, but takes time"
+}
+];
 
-var kl=[];
+var kl=[
+{
+	"city": "kl",
+	"author": "Hui Zhi",
+	"question": "oui la vie eurre",
+	"answer": "I love you",
+	"hint": "what hans says to monica"
+},
+{
+	"city": "kl",
+	"author": "Hui zhi lol",
+	"question": "Sawadeet tulanee trai",
+	"answer": "Sweet 23",
+	"hint": "Age"
+},
+];

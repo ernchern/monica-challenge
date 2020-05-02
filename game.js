@@ -1,4 +1,7 @@
 $( document ).ready(
+function() {
+    $("#hbd").get(0).play();
+}
 );
 
 
