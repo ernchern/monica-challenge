@@ -36,7 +36,7 @@ function restart() {
 
 function ablefinish() {
 	if (sessionStorage.getItem("bandung") == bandung.length &&  sessionStorage.getItem("daejeon") == daejeon.length && sessionStorage.getItem("penang") == penang.length && sessionStorage.getItem("kl") == kl.length) {
-		$("#location").append('<button class="mainbutton" onClick="finish()"><span>Yayy! Go to Finish!</span></button>');
+		$("#location").append('<button class="finishbutton" onClick="finish()"><span>Yayy! Go to Finish!</span></button>');
 	} else {
 		$("#location").append('<button class="mainbutton" onClick="restart()"><span>Restart everything</span></button>');
 	}
@@ -54,10 +54,9 @@ function loadques(city,seq) {
 		$( "#question" ).append('<p class="ques">Question '+(seq+1).toString()+': '+city[seq]["question"]+'</p><p class="gochi">a question by ~ '+city[seq]["author"]+' ~</p><br><p class="gochi">Your Answer:</p>');
 		if ((seq+1)>sessionStorage.getItem(city[seq]["city"])) {
 			var check =city[seq]["answer"];
-			$( "#question" ).append('<input type="text"  id="submit" class="answer" autocomplete="off"><br><br><button class="submitbutton" onclick="checkanswer(\''+check+'\','+city[seq]["city"]+','+seq+')">Submit</button><p class="gochi" id="hint"></p>');
+			$( "#question" ).append('<input type="text"  id="submit" class="answer" autocomplete="off"><button class="submitbutton" onclick="checkanswer(\''+check+'\','+city[seq]["city"]+','+seq+')">Submit</button><p class="hint" id="hint"></p>');
 		} else {
-			$( "#question" ).append('<p class="gochi">'+city[seq]["answer"]+'</p>');
-			$( "#question" ).append('<button class="submitbutton" onclick="loadques('+city[seq]["city"]+','+(seq+1).toString()+')">Next</button>');
+			$( "#question" ).append('<p class="gochi" style="display:inline">'+city[seq]["answer"]+'&nbsp;&nbsp;&nbsp;</p><button class="submitbutton" onclick="loadques('+city[seq]["city"]+','+(seq+1).toString()+')">Next</button>');
 		}
 	}
 }
@@ -66,7 +65,7 @@ var count = 0;
 
 function checkanswer(answer,city,seq) {
 	var check = document.getElementById("submit").value;
-	if (check.split(' ').join('').toLowerCase() == answer.split(' ').join('').toLowerCase()) {
+	if (check.replace(/'/g, '').split(' ').join('').toLowerCase() == answer.split(' ').join('').toLowerCase()) {
 		sessionStorage.setItem(city[seq]["city"],seq+1);
 		count=0;
 		alert("Congratulations, You are correct!");

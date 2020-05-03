@@ -17,8 +17,8 @@ var daejeon=[
 	"city": "daejeon",
 	"author": "John Kim",
 	"question": "What will happen when Tom and Jerry make ice cream?",
-	"answer": "Ben & Jerry's",
-	"hint": "You can but it at GS25."
+	"answer": "Ben & Jerrys",
+	"hint": "You can buy it at GS25."
 }
 
 ];
