@@ -74,7 +74,10 @@ function checkanswer(answer,city,seq) {
 	} else {
 		count++;
 		alert("Oh no... You are wrong! Try again...");
-		if (count >= 2) {
+		if (count >= 3) {
+			alert("Captain Monica, you can try to ask for help from your friends!");
+		}
+		if (count >= 1) {
 			$( "#hint" ).empty();
 			$( "#hint" ).append('Hint: '+city[seq]["hint"]);
 		}
