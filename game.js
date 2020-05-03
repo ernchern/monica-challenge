@@ -51,7 +51,7 @@ function loadques(city,seq) {
 	if (seq >= city.length) {
 		$( "#question" ).append('<div class="row"><div class="column"><img src="img/onion.png" width="200" height="180"></div><div class="column"><p class="message" align="left"><br><br>What?! You completed it?!<br>Don\'t get relaxed!<br>I will be back.. HAHAHA</p></div></div><br><br><button class="mainbutton" onClick="complete()"><span>Go back to map</span></button>');
 	} else {
-		$( "#question" ).append('<p class="ques">Question '+(seq+1).toString()+': '+city[seq]["question"]+'</p><p class="gochi">a question by ~'+city[seq]["author"]+' ~</p><br><p class="gochi">Your Answer:</p>');
+		$( "#question" ).append('<p class="ques">Question '+(seq+1).toString()+': '+city[seq]["question"]+'</p><p class="gochi">a question by ~ '+city[seq]["author"]+' ~</p><br><p class="gochi">Your Answer:</p>');
 		if ((seq+1)>sessionStorage.getItem(city[seq]["city"])) {
 			var check =city[seq]["answer"];
 			$( "#question" ).append('<input type="text"  id="submit" class="answer" autocomplete="off"><br><br><button class="submitbutton" onclick="checkanswer(\''+check+'\','+city[seq]["city"]+','+seq+')">Submit</button><p class="gochi" id="hint"></p>');
