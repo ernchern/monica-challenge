@@ -1,6 +1,5 @@
 $( document ).ready(
 function() {
-    $("#hbd").get(0).play();
 }
 );
 
@@ -55,10 +54,9 @@ function loadques(city,seq) {
 		$( "#question" ).append('<p class="ques">Question '+(seq+1).toString()+': '+city[seq]["question"]+'</p><p class="gochi">a question by ~'+city[seq]["author"]+' ~</p><br><p class="gochi">Your Answer:</p>');
 		if ((seq+1)>sessionStorage.getItem(city[seq]["city"])) {
 			var check =city[seq]["answer"];
-			$( "#question" ).append('<input type="text"  id="submit" class="answer"><br><br><button class="submitbutton" onclick="checkanswer(\''+check+'\','+city[seq]["city"]+','+seq+')">Submit</button><p class="gochi" id="hint"></p>');
+			$( "#question" ).append('<input type="text"  id="submit" class="answer" autocomplete="off"><br><br><button class="submitbutton" onclick="checkanswer(\''+check+'\','+city[seq]["city"]+','+seq+')">Submit</button><p class="gochi" id="hint"></p>');
 		} else {
 			$( "#question" ).append('<p class="gochi">'+city[seq]["answer"]+'</p>');
-			console.log("hi");
 			$( "#question" ).append('<button class="submitbutton" onclick="loadques('+city[seq]["city"]+','+(seq+1).toString()+')">Next</button>');
 		}
 	}
