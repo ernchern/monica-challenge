@@ -12,6 +12,13 @@ var daejeon=[
 	"question": "Alright 肉 안미안",
 	"answer": "I like raw onion",
 	"hint": "This sentence contradicts your faith on a certain food"
+},
+{
+	"city": "daejeon",
+	"author": "John Kim",
+	"question": "What will happen when Tom and Jerry make ice cream?",
+	"answer": "Ben & Jerry's",
+	"hint": "You can but it at GS25."
 }
 
 ];
@@ -78,5 +85,12 @@ var kl=[
 	"question": "Sawadeet tulanee trai",
 	"answer": "Sweet 23",
 	"hint": "Age"
+},
+{
+	"city": "kl",
+	"author": "hz lv ec",
+	"question": "How many people are there in your 22nd birthday? (Yes, find the picture~~)",
+	"answer": "22",
+	"hint": "나는 너를 모르지만 나는 ____를 느끼고있다 (lyrics)"
 },
 ];
