@@ -49,7 +49,7 @@ function finish() {
 function loadques(city,seq) {
 	$( "#question" ).empty();
 	if (seq >= city.length) {
-		$( "#question" ).append('<div class="row"><div class="column"><img src="img/onion.png" width="200" height="180"></div><div class="column"><p class="message" align="left">What?! You completed it?!<br>Don\'t get relaxed!<br>I will be back.. HAHAHA</p></div></div><br><br><button class="mainbutton" onClick="complete()"><span>Go back to map</span></button>');
+		$( "#question" ).append('<div class="row"><div class="column"><img src="img/onion.png" width="200" height="180"></div><div class="column"><p class="message" align="left"><br><br>What?! You completed it?!<br>Don\'t get relaxed!<br>I will be back.. HAHAHA</p></div></div><br><br><button class="mainbutton" onClick="complete()"><span>Go back to map</span></button>');
 	} else {
 		$( "#question" ).append('<p class="ques">Question '+(seq+1).toString()+': '+city[seq]["question"]+'</p><p class="gochi">a question by ~'+city[seq]["author"]+' ~</p><br><p class="gochi">Your Answer:</p>');
 		if ((seq+1)>sessionStorage.getItem(city[seq]["city"])) {
