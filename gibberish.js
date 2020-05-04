@@ -83,7 +83,7 @@ var kl=[
 	"city": "kl",
 	"author": "Hui zhi lol",
 	"question": "Sawit twin tattoo",
-	"answer": "Sweet 23",
+	"answer": "Sweet 22",
 	"hint": "Age"
 },
 {
