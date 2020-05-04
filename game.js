@@ -85,6 +85,7 @@ function checkanswer(answer,city,seq) {
 
 function lastmission() {
     $( "#lastmission" ).dialog({
+	  autoOpen:false,
       resizable: false,
       height: "auto",
       width: 400,
@@ -105,28 +106,31 @@ function lastmission() {
 function showalert(num) {
 	if (num == 0) {
 		$( "#correct" ).dialog({
-		  modal: true,
-		  buttons: {
-			Ok: function() {
-			  $( this ).dialog( "close" );
+			autoOpen:false,
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$( this ).dialog( "close" );
 			}
 		  }
 		});
 	} else if (num == 1) {
 		$( "#wrong" ).dialog({
-		  modal: true,
-		  buttons: {
-			Ok: function() {
-			  $( this ).dialog( "close" );
+			autoOpen:false,
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$( this ).dialog( "close" );
 			}
 		  }
 		});
 	} else {
 		$( "#help" ).dialog({
-		  modal: true,
-		  buttons: {
-			Ok: function() {
-			  $( this ).dialog( "close" );
+			autoOpen:false,
+			modal: true,
+			buttons: {
+				Ok: function() {
+				  $( this ).dialog( "close" );
 			}
 		  }
 		});
