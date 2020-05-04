@@ -82,14 +82,14 @@ var kl=[
 {
 	"city": "kl",
 	"author": "Hui zhi lol",
-	"question": "Sawadeet tulanee trai",
+	"question": "Sawit twin tattoo",
 	"answer": "Sweet 23",
 	"hint": "Age"
 },
 {
 	"city": "kl",
 	"author": "hz lv ec",
-	"question": "How many people are there in your 22nd birthday? (Yes, find the picture~~)",
+	"question": "How many people are there in your 21st birthday? (Yes, find the picture~~)",
 	"answer": "22",
 	"hint": "나는 너를 모르지만 나는 ____를 느끼고있다 (lyrics)"
 },
