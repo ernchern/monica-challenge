@@ -68,17 +68,68 @@ function checkanswer(answer,city,seq) {
 	if (check.replace(/'/g, '').split(' ').join('').toLowerCase() == answer.split(' ').join('').toLowerCase()) {
 		sessionStorage.setItem(city[seq]["city"],seq+1);
 		count=0;
-		alert("Congratulations, You are correct!");
+		showalert(0);
 		loadques(city,seq+1);
 	} else {
 		count++;
-		alert("Oh no... You are wrong! Try again...");
 		if (count >= 3) {
-			alert("Captain Monica, you can try to ask for help from your friends!");
+			showalert(2);
 		}
+		showalert(1);
 		if (count >= 1) {
 			$( "#hint" ).empty();
 			$( "#hint" ).append('Hint: '+city[seq]["hint"]);
 		}
 	}
 }
+
+function lastmission() {
+    $( "#lastmission" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Yes, I got it and I will go now!": function() {
+			$( this ).dialog( "close" );
+			window.location.href = 'final.html';
+        },
+        Cancel: function() {
+			$( this ).dialog( "close" );
+			window.location.href = 'location.html';
+        }
+      }
+    });
+}(jQuery);
+
+function showalert(num) {
+	if (num == 0) {
+		$( "#correct" ).dialog({
+		  modal: true,
+		  buttons: {
+			Ok: function() {
+			  $( this ).dialog( "close" );
+			}
+		  }
+		});
+	} else if (num == 1) {
+		$( "#wrong" ).dialog({
+		  modal: true,
+		  buttons: {
+			Ok: function() {
+			  $( this ).dialog( "close" );
+			}
+		  }
+		});
+	} else {
+		$( "#help" ).dialog({
+		  modal: true,
+		  buttons: {
+			Ok: function() {
+			  $( this ).dialog( "close" );
+			}
+		  }
+		});
+	}
+}
+
