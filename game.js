@@ -1,6 +1,58 @@
 $( document ).ready(
-function() {
+function showalert(num) {
+	if (num == 0) {
+		$( "#correct" ).dialog({
+			autoOpen:false,
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$( this ).dialog( "close" );
+			}
+		  }
+		});
+	} else if (num == 1) {
+		$( "#wrong" ).dialog({
+			autoOpen:false,
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$( this ).dialog( "close" );
+			}
+		  }
+		});
+	} else {
+		$( "#help" ).dialog({
+			autoOpen:false,
+			modal: true,
+			buttons: {
+				Ok: function() {
+				  $( this ).dialog( "close" );
+			}
+		  }
+		});
+	}
 }
+
+function lastmission() {
+    $( "#lastmission" ).dialog({
+	  autoOpen:false,
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Yes, I got it and I will go now!": function() {
+			$( this ).dialog( "close" );
+			window.location.href = 'final.html';
+        },
+        Cancel: function() {
+			$( this ).dialog( "close" );
+			window.location.href = 'location.html';
+        }
+      }
+    });
+}
+
 );
 
 
@@ -83,57 +135,6 @@ function checkanswer(answer,city,seq) {
 	}
 }
 
-function lastmission() {
-    $( "#lastmission" ).dialog({
-	  autoOpen:false,
-      resizable: false,
-      height: "auto",
-      width: 400,
-      modal: true,
-      buttons: {
-        "Yes, I got it and I will go now!": function() {
-			$( this ).dialog( "close" );
-			window.location.href = 'final.html';
-        },
-        Cancel: function() {
-			$( this ).dialog( "close" );
-			window.location.href = 'location.html';
-        }
-      }
-    });
-}
 
-function showalert(num) {
-	if (num == 0) {
-		$( "#correct" ).dialog({
-			autoOpen:false,
-			modal: true,
-			buttons: {
-				Ok: function() {
-					$( this ).dialog( "close" );
-			}
-		  }
-		});
-	} else if (num == 1) {
-		$( "#wrong" ).dialog({
-			autoOpen:false,
-			modal: true,
-			buttons: {
-				Ok: function() {
-					$( this ).dialog( "close" );
-			}
-		  }
-		});
-	} else {
-		$( "#help" ).dialog({
-			autoOpen:false,
-			modal: true,
-			buttons: {
-				Ok: function() {
-				  $( this ).dialog( "close" );
-			}
-		  }
-		});
-	}
-}
+
 
