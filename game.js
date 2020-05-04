@@ -100,7 +100,7 @@ function lastmission() {
         }
       }
     });
-}(jQuery);
+}
 
 function showalert(num) {
 	if (num == 0) {
