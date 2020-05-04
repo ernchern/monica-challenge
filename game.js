@@ -82,25 +82,27 @@ function checkanswer(answer,city,seq) {
 	}
 }
 
-$("#correct").hide();
-$("#wrong").hide();
-$("#help").hide();
-$("#lastmission").hide();
+$( function() {
+    $( "#correct" ).dialog({autoOpen:false});
+	$( "#wrong" ).dialog({autoOpen:false});
+	$( "#help" ).dialog({autoOpen:false});
+	$( "#lastmission" ).dialog({autoOpen:false});
+	} );
 
 function lastmission() {
+	$( "#lastmission" ).dialog("open");
     $( "#lastmission" ).dialog({
-	  autoOpen:false,
       resizable: false,
       height: "auto",
       width: 400,
       modal: true,
       buttons: {
         "Yes, I got it and I will go now!": function() {
-			$( this ).dialog( "close" );
+			$("#lastmission").dialog( "close" );
 			window.location.href = 'final.html';
         },
         Cancel: function() {
-			$( this ).dialog( "close" );
+			$("#lastmission").dialog( "close" );
 			window.location.href = 'location.html';
         }
       }
@@ -109,8 +111,7 @@ function lastmission() {
 
 function showalert(num) {
 	if (num == 0) {
-		$( "#correct" ).dialog({
-			autoOpen:false,
+		$( "#correct" ).dialog("open",{
 			modal: true,
 			buttons: {
 				Ok: function() {
@@ -119,8 +120,7 @@ function showalert(num) {
 		  }
 		});
 	} else if (num == 1) {
-		$( "#wrong" ).dialog({
-			autoOpen:false,
+		$( "#wrong" ).dialog("open",{
 			modal: true,
 			buttons: {
 				Ok: function() {
@@ -129,8 +129,7 @@ function showalert(num) {
 		  }
 		});
 	} else {
-		$( "#help" ).dialog({
-			autoOpen:false,
+		$( "#help" ).dialog("open",{
 			modal: true,
 			buttons: {
 				Ok: function() {
